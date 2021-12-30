@@ -5,11 +5,12 @@ var osloinfo = "";
 var stockinfo = "";
 var copeninfo = "";
 
-
+//sivun ladattua sää tiedot haetaan ja tallennetaan muuttujiin ja tulostetaan sivulle
 getweatherinfo();
 
+//hakee sää tiedot ja tulostaa halutut tiedot taulukkoon
 function getweatherinfo(x) {
-    //Reykjavikin sää tiedot
+    //Reykjavikin sää tietojen haku
     if (reykinfo == "") {
         var reykjavik = new XMLHttpRequest();
         reykjavik.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Reykjavík&units=metric&&lang=fi&appid=10866d9b8ea88da8e3b4408feebaf13f", true);
@@ -35,7 +36,7 @@ function getweatherinfo(x) {
         document.getElementById("reyk").innerHTML = Math.floor(reykinfo.main.temp * 10) / 10 + "°C";
     }
 
-    //helsingin sää tiedot
+    //helsingin sää tietojen haku
     if (helinfo == "") {
         var helsinki = new XMLHttpRequest();
         helsinki.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&&lang=fi&appid=10866d9b8ea88da8e3b4408feebaf13f", true);
@@ -59,7 +60,7 @@ function getweatherinfo(x) {
 
     }
 
-    //oslon sää tiedot
+    //oslon sää tietojen haku
     if (osloinfo == "") {
         var oslo = new XMLHttpRequest();
         oslo.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Oslo&units=metric&lang=fi&appid=10866d9b8ea88da8e3b4408feebaf13f", true);
@@ -82,7 +83,7 @@ function getweatherinfo(x) {
         document.getElementById("oslo").innerHTML = Math.floor(osloinfo.main.temp * 10) / 10 + "°C";
     }
 
-    //tukholman sää tiedot
+    //tukholman sää tietojen haku
     if (stockinfo == "") {
         var stockholm = new XMLHttpRequest();
         stockholm.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Stockholm&units=metric&lang=fi&appid=10866d9b8ea88da8e3b4408feebaf13f", true);
@@ -105,7 +106,7 @@ function getweatherinfo(x) {
         document.getElementById("stock").innerHTML = Math.floor(stockinfo.main.temp * 10) / 10 + "°C";
     }
 
-    //kööpenhaminan sää tiedot
+    //kööpenhaminan sää tietojen haku
     if (copeninfo == "") {
         var copenhangen = new XMLHttpRequest();
         copenhangen.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Copenhagen&units=metric&lang=fi&appid=10866d9b8ea88da8e3b4408feebaf13f", true);
@@ -128,12 +129,6 @@ function getweatherinfo(x) {
         document.getElementById("copen").innerHTML = Math.floor(copeninfo.main.temp * 10) / 10 + "°C";
     }
 }
-
-
-
-
-
-
 
 
 
