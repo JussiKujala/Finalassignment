@@ -19,6 +19,7 @@ div{
 
 table{
     margin: auto;
+    table-layout:fixed;
 }
 
 table, th, td {
@@ -29,6 +30,11 @@ table, th, td {
   }
 
 .column-1{
+padding-left:  30px;
+padding-right: 30px;
+}
+
+#weather{
 padding-left:  30px;
 padding-right: 30px;
 }
