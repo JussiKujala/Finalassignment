@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pääkaupunkien säät</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <h1>Pohjoismaiden pääkaupunkien säät</h1>
+        <div>
+            <table>
+                    <tr>
+                        <th>Valtio</th>
+                        <th>Pääkaupunki</th>
+                        <th id="weather"></th>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td class="column-1">Islanti</td>
+                        <td class="column-1">Reykjavík</td>
+                        <td id="reyk"></td>
+                    </tr>
+                    <tr>
+                        <td class="column-1">Norja</td>
+                        <td class="column-1">Oslo</td>
+                        <td id="oslo"></td>
+                    </tr>
+                    <tr>
+                        <td class="column-1">Ruotsi</td>
+                        <td class="column-1">Tukholma</td>
+                        <td id="stock"></td>
+                    </tr>
+                    <tr>
+                        <td class="column-1">Suomi</td>
+                        <td class="column-1">Helsinki</td>
+                        <td id="hel"></td>
+                    </tr>
+                    <tr>
+                        <td class="column-1">Tanska</td>
+                        <td class="column-1">Kööpenhamina</td>
+                        <td id="copen"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="button" onclick="weatherinfo()">Tuuli</button>
+            <button id="button" onclick="temp()">Lämpötila</button>
+            <button id="button" onclick="weatherinfo()">Sää</button>
+        </div>
+
+
+    <footer id="footer"></footer>
+
+    <script src="js/test.js"></script>
+</body>
+
+</html>
