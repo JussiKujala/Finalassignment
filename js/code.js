@@ -29,11 +29,11 @@ function getweatherinfo(x) {
     }
     if (x == 2) {
         document.getElementById("weather").innerHTML = "Tuuli";
-        document.getElementById("reyk").innerHTML = Math.floor(reykinfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("reyk").innerHTML = Math.floor(reykinfo.wind.speed * 10) / 10 + " m/s";
     }
     if (x == 3) {
-        document.getElementById("weather").innerHTML = "Pilvet";
-        document.getElementById("reyk").innerHTML = Math.floor(reykinfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("weather").innerHTML = "Sää";
+        document.getElementById("reyk").innerHTML = reykinfo.weather[0].description;
     }
 
     //helsingin sää tietojen haku
@@ -53,10 +53,10 @@ function getweatherinfo(x) {
         document.getElementById("hel").innerHTML = Math.floor(helinfo.main.temp * 10) / 10 + "°C";
     }
     if (x == 2) {
-        document.getElementById("hel").innerHTML = Math.floor(helinfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("hel").innerHTML = Math.floor(helinfo.wind.speed * 10) / 10 + " m/s";
     }
     if (x == 3) {
-        document.getElementById("hel").innerHTML = Math.floor(helinfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("hel").innerHTML = helinfo.weather[0].description;;
 
     }
 
@@ -77,10 +77,10 @@ function getweatherinfo(x) {
         document.getElementById("oslo").innerHTML = Math.floor(osloinfo.main.temp * 10) / 10 + "°C";
     }
     if (x == 2) {
-        document.getElementById("oslo").innerHTML = Math.floor(osloinfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("oslo").innerHTML = Math.floor(osloinfo.wind.speed * 10) / 10 + " m/s";
     }
     if (x == 3) {
-        document.getElementById("oslo").innerHTML = Math.floor(osloinfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("oslo").innerHTML = osloinfo.weather[0].description;
     }
 
     //tukholman sää tietojen haku
@@ -100,10 +100,10 @@ function getweatherinfo(x) {
         document.getElementById("stock").innerHTML = Math.floor(stockinfo.main.temp * 10) / 10 + "°C";
     }
     if (x == 2) {
-        document.getElementById("stock").innerHTML = Math.floor(stockinfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("stock").innerHTML = Math.floor(stockinfo.wind.speed * 10) / 10 + " m/s";
     }
     if (x == 3) {
-        document.getElementById("stock").innerHTML = Math.floor(stockinfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("stock").innerHTML = stockinfo.weather[0].description;
     }
 
     //kööpenhaminan sää tietojen haku
@@ -115,7 +115,7 @@ function getweatherinfo(x) {
             if (copenhangen.readyState === 4 && copenhangen.status === 200) {
                 copeninfo = JSON.parse(this.response);
                 document.getElementById("weather").innerHTML = "Lämpötila";
-                document.getElementById("copen").innerHTML = Math.floor(copeninfo.main.temp * 10) / 10 + "°C";
+                document.getElementById("copen").innerHTML = copeninfo.weather[0].description;
             }
         }
     }
@@ -123,10 +123,10 @@ function getweatherinfo(x) {
         document.getElementById("copen").innerHTML = Math.floor(copeninfo.main.temp * 10) / 10 + "°C";
     }
     if (x == 2) {
-        document.getElementById("copen").innerHTML = Math.floor(copeninfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("copen").innerHTML = Math.floor(copeninfo.wind.speed * 10) / 10 + " m/s";
     }
     if (x == 3) {
-        document.getElementById("copen").innerHTML = Math.floor(copeninfo.main.temp * 10) / 10 + "°C";
+        document.getElementById("copen").innerHTML = copeninfo.weather[0].description;
     }
 }
 
