@@ -115,7 +115,7 @@ function getweatherinfo(x) {
             if (copenhangen.readyState === 4 && copenhangen.status === 200) {
                 copeninfo = JSON.parse(this.response);
                 document.getElementById("weather").innerHTML = "Lämpötila";
-                document.getElementById("copen").innerHTML = copeninfo.weather[0].description;
+                document.getElementById("copen").innerHTML = Math.floor(copeninfo.main.temp * 10) / 10 + "°C";
             }
         }
     }
