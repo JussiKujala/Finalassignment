@@ -19,7 +19,10 @@ div{
 
 table{
     margin: auto;
-    table-layout:fixed;
+    table-layout: auto;
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
 }
 
 table, th, td {
@@ -41,12 +44,12 @@ padding-right: 30px;
 
 #button {
     margin-top: 10px;
-    background-color: #ffffff;
+    background-color: #e7d8d8;
     border: none;
     color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 2vw;
   }
