@@ -10,50 +10,49 @@
 </head>
 
 <body>
-
+<!--otsikko-->
     <h1>Pohjoismaiden pääkaupunkien säät</h1>
-        <div>
-            <table>
-                    <tr>
-                        <th>Valtio</th>
-                        <th>Pääkaupunki</th>
-                        <th id="weather"></th>
-                    </tr>
-                <tbody>
-                    <tr>
-                        <td class="column-1">Islanti</td>
-                        <td class="column-1">Reykjavík</td>
-                        <td id="reyk"></td>
-                    </tr>
-                    <tr>
-                        <td class="column-1">Norja</td>
-                        <td class="column-1">Oslo</td>
-                        <td id="oslo"></td>
-                    </tr>
-                    <tr>
-                        <td class="column-1">Ruotsi</td>
-                        <td class="column-1">Tukholma</td>
-                        <td id="stock"></td>
-                    </tr>
-                    <tr>
-                        <td class="column-1">Suomi</td>
-                        <td class="column-1">Helsinki</td>
-                        <td id="hel"></td>
-                    </tr>
-                    <tr>
-                        <td class="column-1">Tanska</td>
-                        <td class="column-1">Kööpenhamina</td>
-                        <td id="copen"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <button id="button" onclick="getweatherinfo(2)">Tuuli</button>
-            <button id="button" onclick="getweatherinfo(1)">Lämpötila</button>
-            <button id="button" onclick="getweatherinfo(3)">Sää</button>
-        </div>
-
-
-    <footer id="footer"></footer>
+    <div>
+        <!--taulukko-->
+        <table>
+            <tr>
+                <th>Valtio</th>
+                <th>Pääkaupunki</th>
+                <th id="weather"></th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td class="column-1">Islanti</td>
+                    <td class="column-1">Reykjavík</td>
+                    <td id="reyk"></td>
+                </tr>
+                <tr>
+                    <td class="column-1">Norja</td>
+                    <td class="column-1">Oslo</td>
+                    <td id="oslo"></td>
+                </tr>
+                <tr>
+                    <td class="column-1">Ruotsi</td>
+                    <td class="column-1">Tukholma</td>
+                    <td id="stock"></td>
+                </tr>
+                <tr>
+                    <td class="column-1">Suomi</td>
+                    <td class="column-1">Helsinki</td>
+                    <td id="hel"></td>
+                </tr>
+                <tr>
+                    <td class="column-1">Tanska</td>
+                    <td class="column-1">Kööpenhamina</td>
+                    <td id="copen"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Napit-->
+        <button id="button" onclick="getweatherinfo(2)">Tuuli</button>
+        <button id="button" onclick="getweatherinfo(1)">Lämpötila</button>
+        <button id="button" onclick="getweatherinfo(3)">Sää</button>
+    </div>
 
     <script src="js/code.js"></script>
 </body>
