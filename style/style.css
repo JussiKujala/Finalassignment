@@ -69,3 +69,15 @@ a{
     text-decoration: none;
     color: black;
 }
+
+a:hover {
+    background-color: lightblue;
+  }
+
+  table, th, td:hover {
+    background-color: rgb(206, 197, 197);
+  }
+
+  #button:hover{
+    background-color: rgb(206, 197, 197);
+  }
